@@ -1,1 +1,1 @@
-# c_practice
+# c_practice by Gordienko Anastasia
