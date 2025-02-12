@@ -70,7 +70,7 @@ void orbital_stability() {
     scanf("%lf\n", &calc_speed);
     scanf("%lf", &fact_speed);
     if (fact_speed >= calc_speed){
-        if (fact_speed - calc_speed <= 0.1){
+        if (fact_speed - calc_speed >= 0.099999 && fact_speed - calc_speed <= 0.10001){
             printf("Орбита стабильна");
         }else{
             printf("Орбита нестабильна");
@@ -78,7 +78,7 @@ void orbital_stability() {
     }else{
         //printf("%lf\n", calc_speed - fact_speed);
         //printf("%d\n", calc_speed - fact_speed <= 0.1);
-        if (calc_speed - fact_speed <= 0.1){
+        if (calc_speed - fact_speed >= 0.099999 && calc_speed - fact_speed <= 0.10001){
             printf("Орбита стабильна");
         }else{
             printf("Орбита нестабильна");
@@ -241,7 +241,7 @@ int main(){
     //moonwalker(); // 2
     //parts_coding(); // 3
     //mission_start(); // 4
-    //orbital_stability(); // 5: почему-то не работает с 56.7 и 56.6
+    //orbital_stability(); // 5
     //crew_division(); //6
     //radiocom(); //7
     //opti_cargo(); //8
@@ -252,15 +252,5 @@ int main(){
     //change_crew(); //13
     //weight_on_moon(); //14
     //transfer_bw(); //15
-
-
-
-
-
-
-
-
-
-
     return 0;
 }
