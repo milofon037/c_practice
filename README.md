@@ -1,1 +1,1 @@
-# c_practice by Gordienko Anastasia
+# c_practice by Gordienko Anastasia K0709-23/1
