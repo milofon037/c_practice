@@ -12,9 +12,7 @@ void main(){
     struct Item* items = malloc(sizeof(struct Item) * n);
 
     for (i = 0; i < n; i++){
-        struct Item it;
-        scanf("%s %d %f", &it.name, &it.count, &it.price); // тут можно напрямую в элемент массива вводить, без посредников
-        items[i] = it;
+        scanf("%s %d %f", &items[i].name, &items[i].count, &items[i].price);
     }
 
     for (i = 0; i < n; i++){

@@ -10,12 +10,10 @@ struct Employee {
 void main(){
     int n, i;
     scanf("%d", &n);
-    struct Employee emps[n];
+    struct Employee* emps = malloc(sizeof(struct Employee) * n);
 
     for (i = 0; i < n; i++){
-        struct Employee emp;
-        scanf("%s %s %f", &emp.name, &emp.job, &emp.salary);
-        emps[i] = emp;
+        scanf("%s %s %f", &emps[i].name, &emps[i].job, &emps[i].salary);
     }
 
     for (i = 0; i < n; i++){

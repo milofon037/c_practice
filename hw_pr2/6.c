@@ -12,12 +12,10 @@ struct Vehicle {
 void main(){
     int n, i;
     scanf("%d", &n);
-    struct Vehicle cars[n];
+    struct Vehicle* cars = malloc(sizeof(struct Vehicle) * n);
 
     for (i = 0; i < n; i++){
-        struct Vehicle car;
-        scanf("%s %s %d %d", &car.mark, &car.model, &car.year, &car.type);
-        cars[i] = car;
+        scanf("%s %s %d %d", &cars[i].mark, &cars[i].model, &cars[i].year, &cars[i].type);
     }
 
     for (i = 0; i < n; i++){
