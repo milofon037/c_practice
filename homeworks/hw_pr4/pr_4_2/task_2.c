@@ -49,7 +49,7 @@ void task2(){
     while (1){
     printf("Введите команду (rmspaces, vowelstar, invreg, exit): ");
     fgets(command, sizeof(command), stdin);
-    command[strlen(command) - 1] = 0;
+    command[strcspn(command, "\n")] = 0;
 
     if (strcasecmp(command, "exit") == 0){
         printf("Завершение программы.");
@@ -58,7 +58,7 @@ void task2(){
 
     printf("Введите строку: ");
     fgets(str, sizeof(str), stdin);
-    str[strlen(str) - 1] = 0;
+    str[strcspn(str, "\n")] = 0;
 
 
     for (int i = 0; i < 3; i++){
