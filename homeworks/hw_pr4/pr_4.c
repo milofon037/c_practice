@@ -46,12 +46,35 @@ void task3(){
         printf("%s\n", res);
         res = strtok(NULL, ";");
     }
-} 
+}
+
+void task4(){
+    char st[100];
+    fgets(st, sizeof(st), stdin);
+    st[strcspn(st, "\n")] = 0;
+    if (strcasecmp(st, "LAUNCH-2025") == 0){
+        printf("Код принят");
+    }else{
+        printf("Ошибка! Код '%s' неверный!", st);
+    }
+}
+
+void task5(){
+    char st[200];
+    fgets(st, sizeof(st), stdin);
+    st[strcspn(st, "\n")] = 0;
+
+    char *copy_st = strdup(st);
+
+    printf("Оригинал: %s\nКопия: %s\n", st, copy_st);
+}
 
 int main(){
     //task1();
     //task2();
     //task3();
+    //task4();
+    //task5();
     return 0;
 }
 
